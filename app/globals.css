@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --dark-bg: #161616;
+  --light-bg: #f0e9de;
+  --dark-hover: #1f2937;
+}
+
+.gradient{
+  background-image: linear-gradient(to right top, #9710da, #8624d9, #752fd8, #6237d5, #4f3cd2, #3c49d4, #2553d5, #005cd4, #006cd4, #0079cf, #0084c6, #188ebc);
+}
+
+
