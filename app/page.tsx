@@ -1,14 +1,21 @@
-import { Navbar } from './Navbar'
-import { Herobanner } from './Herobanner'
+import { Navbar } from "./Navbar";
+import { Herobanner } from "./Herobanner";
 
 export default function Home() {
-return (
+  return (
     <main className="w-full text-center">
-      <Navbar />
-      <Herobanner />
-      <div className="absolute bg-[#161616] w-full" />
-      <div className="absolute gradient w-80 h-80 rounded-full -top-36 -left-36 blur-2xl" />
-      <div className="absolute bg-[#161616]/30 w-full backdrop-blur-sm" />
+      <div id="home" className="sticky top-0">
+        <Navbar />
+        <Herobanner />
+      </div>
+
+      <div id="whatWeDo" className="bg-green-500 sticky top-0 w-full h-screen flex justify-center items-center text-white bg-[#161616]">
+        what we do
+      </div>
+
+      <div id="contactUs" className="sticky top-0 w-full h-screen flex justify-center items-center text-white bg-[#161616]">
+        contact us
+      </div>
     </main>
-  )
+  );
 }
