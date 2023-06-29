@@ -4,7 +4,7 @@ const navList = ["Amis sans frontieres", "Home", "What we do", "Contact Us"];
 
 export const Navbar = () => {
   return (
-    <div className="flex items-center justify-between px-8 text-white h-40 sm:h-auto">
+    <div className="flex items-center justify-between px-8 text-white">
 
       <div className="grid grid-cols-3 w-full place-content-center z-50 ">
         {navList.map((list, index) => (
@@ -21,12 +21,7 @@ export const Navbar = () => {
         ))}
       </div>
 
-
-  
-
-
-            <div className="absolute gradient w-80 h-80 rounded-full -top-36 -left-36 blur-2xl z-10" />
-
+      <div className="absolute gradient w-80 h-80 rounded-full -top-36 -left-36 blur-2xl z-10" />
     </div>
   );
 };

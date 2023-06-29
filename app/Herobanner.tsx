@@ -1,6 +1,6 @@
 export const Herobanner = () => {
   return (
-    <div className="md:mb-20 p-8 text-white text-4xl md:text-7xl lg:text-8xl font-bold tracking-wider leading-normal sm:leading-relaxed md:leading-[6rem] lg:leading-[7.5rem] h-screen">
+    <div className="md:mb-20 p-8 text-white text-4xl md:text-7xl lg:text-8xl font-bold tracking-wider leading-normal sm:leading-relaxed md:leading-[6rem] lg:leading-[7.5rem]">
       <div>
         Uniting People in{" "}
         <div className="flex items-center justify-center tracking-widest ">
