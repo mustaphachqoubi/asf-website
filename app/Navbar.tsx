@@ -10,10 +10,10 @@ export const Navbar = () => {
         {navList.map((list, index) => (
           <div
             key={index}
-            className={`border-b-2 border-white p-5 flex justify-center text-center items-center ${
+            className={`border-b-2 border-white p-2 text-sm md:text-md 2xl:p-5 2xl:text-2xl 2xl:font-bold flex justify-center text-center items-center ${
               index === 0
-                ? "col-span-3 font-bold text-lg border-t-none"
-                : "col-span-3 cursor-pointer col-span-1 md:col-span-3 lg:col-span-1 text-sm md:text-lg hover:bg-[#1f2937]/30"
+                ? "col-span-3 font-bold border-t-none p-4 text-md md:text-lg 2xl:text-4xl"
+                : "col-span-3 cursor-pointer col-span-1 md:col-span-1 hover:bg-[#1f2937]/30"
             }`}
           >
             {list}
@@ -25,14 +25,3 @@ export const Navbar = () => {
     </div>
   );
 };
-
-
-{
-  /*
-       <div className="flex sm:hidden z-50 my-4 justify-end w-full cursor-pointer">
-        <div className="border-2 hover:border-4 border-white rounded-lg h-12 w-12 flex justify-center items-center">
-          =
-        </div>
-      </div>
-   */
-}
