@@ -14,7 +14,6 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
           <div className="relative overflow-hidden flex items-center justify-center bg-hidden border-4 border-white w-36 sm:h-16 h-10 md:w-32 md:h-16 rounded-full">
             
             <ReactPlayer 
-              className="bg-red-500"
               url="https://youtu.be/UvWfDw6Rnww" 
               playing="true"
               muted="true"
