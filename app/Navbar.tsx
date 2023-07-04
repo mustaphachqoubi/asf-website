@@ -8,19 +8,14 @@ export const Navbar = () => {
 
       <div className="grid grid-cols-3 w-full place-content-center z-50 ">
         {navList.map((list, index) => (
-          <a href={`${index === 1 ? "#home" : index === 2 ? "#wwd" : index === 3 ? "#cu" : "#"}`}
+          <a key={index} href={`${index === 1 ? "#home" : index === 2 ? "#wwd" : index === 3 ? "#cu" : "#"}`}
 className={`border-b-2 border-white p-2 text-sm md:text-md 2xl:p-5 2xl:text-2xl 2xl:font-bold flex justify-center text-center items-center ${
               index === 0
                 ? "col-span-3 font-bold border-t-none p-4 text-md md:text-lg 2xl:text-4xl"
                 : "col-span-3 cursor-pointer col-span-1 md:col-span-1 hover:bg-[#1f2937]/30"
             }`}
           >
-            <div
-            key={index}
-            >
             {list}
-          </div>
-
           </a>
           ))}
       </div>
