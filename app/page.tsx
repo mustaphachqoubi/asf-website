@@ -15,7 +15,7 @@ export default function Home() {
         <Herobanner />
       </div>
 
-      <div id="wwd" className={`flex flex-col sticky top-0 w-full h-screen p-8 text-white bg-[#161616]`}>
+      <div id="wwd" className={`flex flex-col sticky top-0 w-full h-screen p-8 text-white bg-[#161616] `}>
         <Whatwedo />
       </div>
 
