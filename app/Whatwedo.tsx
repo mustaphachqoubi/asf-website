@@ -1,15 +1,8 @@
-import * as d3 from "d3"
-
 export const Whatwedo = () => {
   return (
     <>
       <div className="flex-1 flex flex-col-reverse md:flex-row justify-between items-center">
-        <div className="flex-1 h-full flex justify-center items-center">
-        <svg className="w-full h-full overflow-hidden" fill="none" viewBox="0 0 245 52">
-        <rect height="15" rx="3" width="150" fill="#4122ff" />
-        </svg>
-
-        </div>
+        <div className="flex-1 h-full flex justify-center items-center">one</div>
         <div className=" flex-1 h-full flex justify-center items-center">two</div>
       </div>
 
