@@ -1,8 +1,9 @@
 import { FiMenu } from 'react-icons'
+import React from 'react'
 
 const navList = ["Amis sans frontieres", "Home", "What we do", "Contact Us"];
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   return (
     <div className="flex items-center justify-between px-8 text-white">
 

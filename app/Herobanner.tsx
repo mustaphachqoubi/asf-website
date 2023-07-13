@@ -1,7 +1,8 @@
 import ReactPlayer from 'react-player';
 import dynamic from 'next/dynamic'
+import React from 'react'
 
-export const Herobanner = () => {
+export const Herobanner: React.FC = () => {
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -15,9 +16,9 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
             
             <ReactPlayer 
               url="https://youtu.be/UvWfDw6Rnww" 
-              playing="true"
-              muted="true"
-              loop="true"
+              playing={true}
+              muted={true}
+              loop={true}
             />
 
           </div>
