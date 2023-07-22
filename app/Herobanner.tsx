@@ -12,12 +12,12 @@ export const Herobanner: React.FC = () => {
         <div className="flex items-center justify-center tracking-widest ">
           S
           <div className="relative overflow-hidden flex items-center justify-center bg-hidden border-4 border-white w-36 sm:h-16 h-10 md:w-32 md:h-16 rounded-full">
-            {/*<ReactPlayer
+            <ReactPlayer
               url="https://youtu.be/UvWfDw6Rnww"
               playing={true}
               muted={true}
               loop={true}
-            />*/}
+            />
           </div>
           lidarity
         </div>{" "}

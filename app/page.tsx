@@ -3,6 +3,7 @@
 import { Navbar } from "./Navbar";
 import { Herobanner } from "./Herobanner";
 import { Whatwedo } from "./Whatwedo";
+import { Contactus } from "./Contactus.tsx"
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
         id="cu"
         className={`flex sticky top-0 w-full h-screen justify-center items-center text-white bg-[#161616]`}
       >
-        contact us
+        <Contactus />
       </div>
     </main>
   );
