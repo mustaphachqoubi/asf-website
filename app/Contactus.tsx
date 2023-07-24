@@ -1,4 +1,5 @@
 import { AiFillHeart, AiFillInstagram, AiFillYoutube, AiFillFacebook } from 'react-icons/ai'
+import { useState, useEffect } from 'react'
 
 export const Contactus = () => {
   const icons = [
@@ -35,29 +36,43 @@ export const Contactus = () => {
       id: 1,
       img: "https://marketplace.canva.com/EAFBCRpOy3g/1/0/1600w/canva-yellow-%26-black-earn-money-youtube-thumbnail-e6QKC2GbjAQ.jpg",
       sentence: "Visit"
-    },
-
+    }
   ]
 
+  const [ emailDisplay, setEmailDisplay ] = useState("hidden")
+  const [ phoneDisplay, setPhoneDisplay] = useState("hidden")
+  const [ emailIconDisplay, setEmailIconDisplay ] = useState("flex")
+  const [ phoneIconDisplay, setPhoneIconDisplay] = useState("flex")
+  const [ congratsDisplay, setCongratsDisplay] = useState("hidden")
 
   const showEmail = () => {
-
+    setEmailDisplay('flex')
   }
 
   const showPhone = () => {
-
+    setPhoneDisplay("flex")
   }
+  
+
+  useEffect(() => {
+
+    emailDisplay === "flex" && setEmailIconDisplay('hidden')
+    phoneDisplay === "flex" && setPhoneIconDisplay('hidden')
+
+    emailDisplay === "flex" && phoneDisplay === "flex" && setCongratsDisplay('flex')
+
+  }, [emailDisplay, phoneDisplay])
+
   return (
   <>
     <div className="w-full h-full">
       <div className='w-full h-full flex flex-col md:grid grid-cols-1 divide-y-2 md:divide-y-0 md:grid-cols-2 md:divide-x-2'>
-        <div className="flex-1 p-6 flex flex-col justify-between md:justify-center md:gap-60 items-center">
+        <div className="flex-1 p-6 flex flex-col justify-center  items-center">
             <div className="text-sm md:text-md lg:text-lg xl:text-2xl"> Play to win email and phone number </div>
-            <div className="w-full h-full relative">
-              <div className="world w-full h-full relative overflow-hidden ">
-
-
-              <img src="/hunterth.svg" className="h-full"/>
+            
+            <div className="w-full h-full flex flex-col-reverse justify-between ">
+              <div className="world w-full relative overflow-hidden ">
+                <img src="/hunterth.svg" className="h-full "/>
 
                 <div className=" absolute top-0 bottom-0 left-[40%] right-0 overflow-hidden flex items-center justify-center ">
                   <img src="/bird.svg" className="w-10 md:w-16 absolute top-0 "/>
@@ -65,23 +80,27 @@ export const Contactus = () => {
                   <img src="/bird.svg" className="w-5 md:w-8 absolute top-0 left-5"/>
                   <img src="/bird.svg" className="w-5 md:w-8 absolute top-0 right-5"/>
 
-                  <img src="/email.svg" className="w-8 md:w-12 email" onClick={showEmail}/>
-                  <img src="/phone.svg" className="w-8 md:w-12 absolute left-5 phone" onClick={showPhone}/>
+                  <img src="/email.svg" className={`w-8 md:w-12 email ${emailIconDisplay}`} onClick={showEmail}/>
+                  <img src="/phone.svg" className={`w-8 md:w-12 absolute left-5 phone ${phoneIconDisplay}`} onClick={showPhone}/>
+                  <p className={`${congratsDisplay} justify-center`}>
+                  Congrats !
+                </p>
 
-                  
                 </div>
-
                 
               </div>
-              <div className="text-xs bg-red-500 absolute md:top-0 bottom-0 md:bottom-auto right-0 left-0 flex flex-col hidden">
-                    <p>
-                      mustaphachqoubi@gmail.com
-                      +2126988900
-                    </p>
-                </div>
+              <div className="text-xs flex flex-col justify-center h-20">
+                <p className={`${emailDisplay} justify-center`}>
+                  mustaphachqoubi@gmail.com
+                </p>
+                <p className={`${phoneDisplay} justify-center`}>
+                  +2126988900
+                </p>
 
+                              </div>
             </div>
-        </div>
+
+          </div>
 
          <div className="flex-1  p-6 flex flex-col md:flex-row">
               <div className="w-full md:w-10 md:h-full flex flex-row md:flex-col gap-5 justify-center ">
