@@ -38,13 +38,49 @@ export const Contactus = () => {
     },
 
   ]
+
+
+  const showEmail = () => {
+
+  }
+
+  const showPhone = () => {
+
+  }
   return (
   <>
     <div className="w-full h-full">
       <div className='w-full h-full flex flex-col md:grid grid-cols-1 divide-y-2 md:divide-y-0 md:grid-cols-2 md:divide-x-2'>
         <div className="flex-1 p-6 flex flex-col justify-between md:justify-center md:gap-60 items-center">
             <div className="text-sm md:text-md lg:text-lg xl:text-2xl"> Play to win email and phone number </div>
-            <div>game</div>
+            <div className="w-full h-full relative">
+              <div className="world w-full h-full relative overflow-hidden ">
+
+
+              <img src="/hunterth.svg" className="h-full"/>
+
+                <div className=" absolute top-0 bottom-0 left-[40%] right-0 overflow-hidden flex items-center justify-center ">
+                  <img src="/bird.svg" className="w-10 md:w-16 absolute top-0 "/>
+                  <img src="/bird.svg" className="w-8 md:w-10 absolute top-0  left-0"/>
+                  <img src="/bird.svg" className="w-5 md:w-8 absolute top-0 left-5"/>
+                  <img src="/bird.svg" className="w-5 md:w-8 absolute top-0 right-5"/>
+
+                  <img src="/email.svg" className="w-8 md:w-12 email" onClick={showEmail}/>
+                  <img src="/phone.svg" className="w-8 md:w-12 absolute left-5 phone" onClick={showPhone}/>
+
+                  
+                </div>
+
+                
+              </div>
+              <div className="text-xs bg-red-500 absolute md:top-0 bottom-0 md:bottom-auto right-0 left-0 flex flex-col hidden">
+                    <p>
+                      mustaphachqoubi@gmail.com
+                      +2126988900
+                    </p>
+                </div>
+
+            </div>
         </div>
 
          <div className="flex-1  p-6 flex flex-col md:flex-row">

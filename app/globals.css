@@ -30,3 +30,46 @@ body {
     #188ebc
   );
 }
+
+.email{
+  animation: emailanimation 5s ease-in-out infinite
+}
+
+@keyframes emailanimation {
+
+ 0% {
+    position: absolute;
+    bottom: 170px;
+  }
+  50% {
+    position: absolute;
+    bottom: 48px;
+  }
+  100% {
+    position: absolute;
+    bottom: 170px;
+  }
+
+}
+
+
+.phone{
+  animation: phoneanimation 5s ease-in-out infinite
+}
+
+@keyframes phoneanimation {
+
+ 0% {
+    position: absolute;
+    bottom: 48px;
+  }
+  50% {
+    position: absolute;
+    bottom: 170px;
+  }
+  100% {
+    position: absolute;
+    bottom: 48px;
+  }
+
+}
