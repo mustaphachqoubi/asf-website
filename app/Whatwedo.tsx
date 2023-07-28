@@ -1,11 +1,12 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Model } from './Wall.jsx'
+import Image from 'next/image'
 
-export const Whatwedo = () => {
+export const Whatwedo: React.FC = () => {
   return (
     <>
-      <div className="flex-1 flex justify-center items-center h-full w-full overflow-hidden">
+      <div className="flex-1 flex justify-center items-center h-full w-full overflow-hidden ">
           <Canvas >
             <Model />
             <OrbitControls />
@@ -27,14 +28,14 @@ export const Whatwedo = () => {
           </div>
         </div>
         <div className=" flex-1 h-full hidden lg:flex justify-center items-center p-4 w-full">
-          <div className='relative rounded-lg overflow-hidden'>
-            <img alt="people" src="/paris.jpeg"/>
+          <div className='relative rounded-lg overflow-hidden '>
+            <Image alt="people" src="/paris.jpeg" width="1000" height="1000"/>
             <div className="absolute bg-[#121212]/80 top-0 left-0 right-0 bottom-0"/>
             <div className="absolute cardgradient w-60 h-60 rounded-full -top-20 -left-20 blur-2xl z-10" />
-            <div className="absolute top-5 right-5 rounded-full p-1 px-2 border text-[0.6rem]">Multiple projects</div>
+            <div className="absolute top-5 right-5 rounded-full border text-[0.5rem] w-20">Multiple projects</div>
             <div className="absolute bottom-5 left-5 flex flex-col gap-2 w-full items-start">
-              <h1 className="font-bold text-xl xl:text-2xl">50+ PROJECT DONE</h1>
-              <a href="https://google.com" target="_blank" className="bg-white rounded-full text-[#121212] text-xs w-36 px-4 py-2 font-bold border-2 border-white hover:border-white hover:bg-transparent hover:text-white cursor-pointer duration-300">See Projects</a>
+              <h1 className="font-bold text-2xl ">50+ PROJECT DONE</h1>
+              <a href="https://google.com" target="_blank" className="bg-white rounded-full text-[#121212] text-[0.5rem] w-36 font-bold border-2 border-white hover:border-white hover:bg-transparent hover:text-white cursor-pointer duration-300">See Projects</a>
             </div>
           </div>
         </div>
@@ -44,3 +45,4 @@ export const Whatwedo = () => {
     </>
   );
 };
+

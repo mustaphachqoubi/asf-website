@@ -28,14 +28,14 @@ export const Contactus = () => {
       ariaLabel: "instagram"
     },
     {
-      id: 1,
+      id: 2,
       img: "https://i.ytimg.com/vi/82zWdrmnKME/maxresdefault.jpg",
       sentence: "Watch",
       ariaLabel: "youtube"
     },
 
     {
-      id: 1,
+      id: 3,
       img: "https://marketplace.canva.com/EAFBCRpOy3g/1/0/1600w/canva-yellow-%26-black-earn-money-youtube-thumbnail-e6QKC2GbjAQ.jpg",
       sentence: "Visit",
       ariaLabel: "facebook"
@@ -108,8 +108,8 @@ export const Contactus = () => {
          <div className="flex-1  p-6 flex flex-col md:flex-row">
               <div className="w-full md:w-10 md:h-full flex flex-row md:flex-col gap-5 justify-center ">
              {icons.map(icon => (
-             <a aria-label={icon.ariaLabel} href={icon.link} target="_blank">
-              <div key={icon.id} className="border-2 rounded-lg text-lg p-2 flex justify-center items-center w-10 h-10 hover:bg-white hover:text-[#121212] hover:border-[#121212] cursor-pointer duration-300">{icon.icon}</div>
+             <a key={icon.id} aria-label={icon.ariaLabel} href={icon.link} target="_blank">
+              <div  className="border-2 rounded-lg text-lg p-2 flex justify-center items-center w-10 h-10 hover:bg-white hover:text-[#121212] hover:border-[#121212] cursor-pointer duration-300">{icon.icon}</div>
              </a>
             ))} 
           </div>
