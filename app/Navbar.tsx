@@ -1,4 +1,3 @@
-import { FiMenu } from "react-icons";
 import React from "react";
 
 const navList = [

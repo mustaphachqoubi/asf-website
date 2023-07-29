@@ -1,42 +1,61 @@
 import { AiFillHeart, AiFillInstagram, AiFillYoutube, AiFillFacebook } from 'react-icons/ai'
 import { useState, useEffect } from 'react'
+import Image from "next/image"
 
 export const Contactus = () => {
-  const icons = [
+
+  interface IconsTypes {
+    icon: JSX.Element,
+    link: string,
+    id: any,
+    ariaLabel: string
+  }
+
+  interface CardsTypes {
+    id: any,
+    img: string,
+    sentence: string,
+    ariaLabel: string
+  }
+
+  const icons: IconsTypes[] = [
     {
       icon: <AiFillInstagram />,
       link: "https://google.com",
-      id: 1
+      id: 1,
+      ariaLabel: "instagram"
     },
     {
       icon: <AiFillYoutube />,
       link: "https://google.com",
-      id: 2
+      id: 2,
+      ariaLabel: "youtube"
     },
     {
       icon: <AiFillFacebook />,
       link: "https://google.com",
-      id: 3
+      id: 3,
+      ariaLabel: "facebook"
     }
   ]
 
-  const cards = [
+  const cards: CardsTypes[] = [
     {
       id: 1,
-      img: "https://marketplace.canva.com/EAFFt_DccoA/1/0/1600w/canva-colorful-freelancer-youtube-thumbnail-ucA52BZ7Bqk.jpg",
+      img: "/instagram.jpeg",
       sentence: "Visit",
       ariaLabel: "instagram"
     },
     {
       id: 2,
-      img: "https://i.ytimg.com/vi/82zWdrmnKME/maxresdefault.jpg",
+      img: "/youtube.jpeg",
       sentence: "Watch",
       ariaLabel: "youtube"
     },
 
     {
       id: 3,
-      img: "https://marketplace.canva.com/EAFBCRpOy3g/1/0/1600w/canva-yellow-%26-black-earn-money-youtube-thumbnail-e6QKC2GbjAQ.jpg",
+      img: "/facebook.jpeg",
       sentence: "Visit",
       ariaLabel: "facebook"
     }
@@ -75,16 +94,16 @@ export const Contactus = () => {
             
             <div className="w-full h-full flex flex-col-reverse justify-between ">
               <div className="world w-full relative overflow-hidden ">
-                <img alt="hunter" src="/hunterth.svg" className="h-full "/>
+                <Image  width={50} height={50}  alt="hunter" src="/hunterth.svg" className="h-full w-full"/>
 
                 <div className=" absolute top-0 bottom-0 left-[40%] right-0 overflow-hidden flex items-center justify-center ">
-                  <img alt="bird" src="/bird.svg" className="w-10 md:w-16 absolute top-0 "/>
-                  <img alt="bird" src="/bird.svg" className="w-8 md:w-10 absolute top-0  left-0"/>
-                  <img alt="bird" src="/bird.svg" className="w-5 md:w-8 absolute top-0 left-5"/>
-                  <img alt="bird" src="/bird.svg" className="w-5 md:w-8 absolute top-0 right-5"/>
+                  <Image  width={50} height={50} alt="bird" src="/bird.svg" className="w-10 md:w-16 absolute top-0 "/>
+                  <Image  width={50} height={50} alt="bird" src="/bird.svg" className="w-8 md:w-10 absolute top-0  left-0"/>
+                  <Image  width={50} height={50} alt="bird" src="/bird.svg" className="w-5 md:w-8 absolute top-0 left-5"/>
+                  <Image  width={50} height={50} alt="bird" src="/bird.svg" className="w-5 md:w-8 absolute top-0 right-5"/>
 
-                  <img alt='email' src="/email.svg" className={`w-8 md:w-12 email ${emailIconDisplay}`} onClick={showEmail}/>
-                  <img alt='phone' src="/phone.svg" className={`w-8 md:w-12 absolute left-5 phone ${phoneIconDisplay}`} onClick={showPhone}/>
+                  <Image  width={50} height={50} alt='email' src="/email.svg" className={`w-8 md:w-12 email ${emailIconDisplay}`} onClick={showEmail}/>
+                  <Image  width={50} height={50} alt='phone' src="/phone.svg" className={`w-8 md:w-12 absolute left-5 phone ${phoneIconDisplay}`} onClick={showPhone}/>
                   <p className={`${congratsDisplay} justify-center`}>
                   Congrats !
                 </p>
@@ -105,7 +124,7 @@ export const Contactus = () => {
 
           </div>
 
-         <div className="flex-1  p-6 flex flex-col md:flex-row">
+         <div className="flex-1 p-6 flex flex-col md:flex-row">
               <div className="w-full md:w-10 md:h-full flex flex-row md:flex-col gap-5 justify-center ">
              {icons.map(icon => (
              <a key={icon.id} aria-label={icon.ariaLabel} href={icon.link} target="_blank">
@@ -115,23 +134,23 @@ export const Contactus = () => {
           </div>
 
             <div className="relative md:flex flex-col justify-center gap-10 hidden ">
-              <img alt="arrow" src={"/arrowOne.svg"} /> 
-              <img alt="arrow" src={"/arrowThree.svg"} /> 
-              <img alt="arrow" src={"/arrowTwo.svg"} /> 
+              <Image width={100} height={100} alt="arrow" src={"/arrowOne.svg"} /> 
+              <Image width={100} height={100} alt="arrow" src={"/arrowThree.svg"} /> 
+              <Image width={100} height={100} alt="arrow" src={"/arrowTwo.svg"} /> 
             </div>
 
             <div className="relative flex justify-center gap-10 md:hidden">
-              <img alt="arrow" src={"/arrowtwosmall.svg"} /> 
-              <img alt="word" src={"/link.svg"} className="absolute left-0 top-2"/> 
-              <img alt="word" src={"/by.svg"} className="absolute left-0 bottom-2"/> 
-              <img alt="word" src={"/yourself.svg"} className="absolute right-0"/> 
+              <Image width={20} height={20} alt="arrow" src={"/arrowtwosmall.svg"} /> 
+              <Image width={50} height={50} alt="word" src={"/link.svg"} className="absolute left-0 top-2 "/> 
+              <Image width={50} height={50}  alt="word" src={"/by.svg"} className="absolute left-0 bottom-2"/> 
+              <Image width={50} height={50}  alt="word" src={"/yourself.svg"} className="absolute right-0"/> 
             </div>
 
             <div className=" md:h-full flex md:flex-col md:justify-center justify-between md:gap-10 items-center ">
              {
                 cards.map(card => (
                 <div key={card.id} className="border-2 flex flex-col gap-2 rounded-lg w-52 p-1 md:p-2">
-                <div className="border-2 rounded-lg overflow-hidden bg-white"><img alt="social media" src={card.img} /></div>
+                <div className="border-2 rounded-lg overflow-hidden bg-white"><Image width={300} height={300}  alt="social media " src={card.img} /></div>
                 <div className="duration-300 border-2 rounded-lg hover:text-[#121212] hover:bg-white hover:border-[#121212] text-xs md:text-sm p-1 cursor-pointer">{card.sentence}</div>
               </div>
                 ))
@@ -140,7 +159,7 @@ export const Contactus = () => {
         </div>
       </div>
 
-      <div className="text-xs border-t-2 p-2 flex justify-center bg-[#121212] absolute left-0 right-0">
+      <div className="text-xs border-t-2 p-2 flex justify-center bg-[#121212] absolute left-0 right-0 ">
           <p className="flex gap-2 items-center">built with <span className="text-lg"><AiFillHeart /></span> By <a target="_blank" aria-label="mustaphachqoubi" href="https://mustaphachqoubi.me" className='font-bold underline hover:no-underline'>@Mustaphachqoubi</a> </p>
       </div>
     </div>

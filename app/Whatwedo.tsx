@@ -29,7 +29,7 @@ export const Whatwedo: React.FC = () => {
         </div>
         <div className=" flex-1 h-full hidden lg:flex justify-center items-center p-4 w-full">
           <div className='relative rounded-lg overflow-hidden '>
-            <Image alt="people" src="/paris.jpeg" width="1000" height="1000"/>
+            <Image placeholder="blur" loading="lazy" blurDataURL="/paris.jpeg" alt="people" src="/paris.jpeg" width="1000" height="1000"/>
             <div className="absolute bg-[#121212]/80 top-0 left-0 right-0 bottom-0"/>
             <div className="absolute cardgradient w-60 h-60 rounded-full -top-20 -left-20 blur-2xl z-10" />
             <div className="absolute top-5 right-5 rounded-full border text-[0.5rem] w-20">Multiple projects</div>

@@ -3,8 +3,7 @@
 import { Navbar } from "./Navbar";
 import { Herobanner } from "./Herobanner";
 import { Whatwedo } from "./Whatwedo";
-import { Contactus } from "./Contactus.tsx"
-import { useEffect, useState } from "react";
+import { Contactus } from "./Contactus"
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
 
       <div
         id="wwd"
-        className={`flex flex-col sticky top-0 w-full h-screen p-8 text-white bg-[#161616] `}
+        className={`flex flex-col sticky top-0 w-full h-screen p-8 text-white bg-[#161616]`}
       >
         <Whatwedo />
       </div>
