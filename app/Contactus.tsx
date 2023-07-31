@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Image from "next/image"
 
 export const Contactus = () => {
+  const IMAGE_W_AND_H =300
 
   interface IconsTypes {
     icon: JSX.Element,
@@ -89,12 +90,12 @@ export const Contactus = () => {
   <>
     <div className="w-full h-full">
       <div className='w-full h-full flex flex-col md:grid grid-cols-1 divide-y-2 md:divide-y-0 md:grid-cols-2 md:divide-x-2'>
-        <div className="flex-1 p-6 flex flex-col justify-center  items-center">
-            <div className="text-sm md:text-md lg:text-lg xl:text-2xl"> Play to win email and phone number </div>
+        <div className="h-auto flex gap-2 flex-col items-center justify-center">
+            <div className="text-sm md:text-md lg:text-lg xl:text-2xl p-2 md:p-4"> Play to win email and phone number </div>
             
             <div className="w-full h-full flex flex-col-reverse justify-between ">
               <div className="world w-full relative overflow-hidden ">
-                <Image  width={50} height={50}  alt="hunter" src="/hunterth.svg" className="h-full w-full"/>
+                <Image width={300} height={300}  alt="hunter" src="/hunterth.svg" className="md:h-full md:w-full" />
 
                 <div className=" absolute top-0 bottom-0 left-[40%] right-0 overflow-hidden flex items-center justify-center ">
                   <Image  width={50} height={50} alt="bird" src="/bird.svg" className="w-10 md:w-16 absolute top-0 "/>
@@ -141,8 +142,8 @@ export const Contactus = () => {
 
             <div className="relative flex justify-center gap-10 md:hidden">
               <Image width={20} height={20} alt="arrow" src={"/arrowtwosmall.svg"} /> 
-              <Image width={50} height={50} alt="word" src={"/link.svg"} className="absolute left-0 top-2 "/> 
-              <Image width={50} height={50}  alt="word" src={"/by.svg"} className="absolute left-0 bottom-2"/> 
+              <Image width={40} height={40} alt="word" src={"/link.svg"} className="absolute left-0 top-2 "/> 
+              <Image width={20} height={20}  alt="word" src={"/by.svg"} className="absolute left-0 bottom-2"/> 
               <Image width={50} height={50}  alt="word" src={"/yourself.svg"} className="absolute right-0"/> 
             </div>
 
@@ -150,7 +151,7 @@ export const Contactus = () => {
              {
                 cards.map(card => (
                 <div key={card.id} className="border-2 flex flex-col gap-2 rounded-lg w-52 p-1 md:p-2">
-                <div className="border-2 rounded-lg overflow-hidden bg-white"><Image width={300} height={300}  alt="social media " src={card.img} /></div>
+                <div className="border-2 rounded-lg overflow-hidden bg-white"><Image width={IMAGE_W_AND_H} height={IMAGE_W_AND_H} alt="social media " src={card.img} /></div>
                 <div className="duration-300 border-2 rounded-lg hover:text-[#121212] hover:bg-white hover:border-[#121212] text-xs md:text-sm p-1 cursor-pointer">{card.sentence}</div>
               </div>
                 ))
